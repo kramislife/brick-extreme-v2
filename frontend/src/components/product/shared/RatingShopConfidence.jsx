@@ -6,7 +6,7 @@ const confidenceFeatures = [
   {
     icon: <Shield className="w-6 h-6" />,
     title: "Authentic Products",
-    description: "100% genuine World of Minifigs parts",
+    description: "100% genuine Brick Extreme parts",
   },
   {
     icon: <Truck className="w-6 h-6" />,

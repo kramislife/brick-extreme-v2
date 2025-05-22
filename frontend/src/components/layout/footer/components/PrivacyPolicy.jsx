@@ -258,7 +258,7 @@ const PrivacyPolicy = () => {
             please contact us via email at brickextremeofficial@gmail.com
           </p>
           <div className="text-sm ml-5">
-            <p>World of Minifigs/ Brick Extreme LLC</p>
+            <p> Brick Extreme LLC</p>
             <p>Lehi, Utah, 84043</p>
             <p>build.wom@gmail.com</p>
             <p>brickextremeofficial@gmail.com</p>

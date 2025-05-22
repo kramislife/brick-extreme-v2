@@ -127,13 +127,13 @@ const TermsOfUse = () => {
           <li className="text-sm">
             <span className="font-medium">Copyright:</span> All content on this
             website, including text, images, logos, and designs, is the property
-            of World of Minifigs or its licensors and is protected by copyright
+            of Brick Extreme or its licensors and is protected by copyright
             laws.
           </li>
           <li className="text-sm">
-            <span className="font-medium">Trademarks:</span> "World of Minifigs"
-            and our logo are trademarks of World of Minifigs/Brick Extreme. You
-            may not use our trademarks without our prior written consent.
+            <span className="font-medium">Trademarks:</span> "Brick Extreme" and
+            our logo are trademarks of Brick Extreme/Brick Extreme. You may not
+            use our trademarks without our prior written consent.
           </li>
           <li className="text-sm">
             <span className="font-medium">LEGO Trademarks:</span> LEGO, the LEGO
@@ -150,8 +150,8 @@ const TermsOfUse = () => {
       content: (
         <div className="space-y-3">
           <p className="text-sm">
-            To the fullest extent permitted by law, World of Minifigs shall not
-            be liable for any direct, indirect, incidental, consequential, or
+            To the fullest extent permitted by law, Brick Extreme shall not be
+            liable for any direct, indirect, incidental, consequential, or
             punitive damages arising from your use of this website or the
             purchase of our products.
           </p>
@@ -206,7 +206,7 @@ const TermsOfUse = () => {
             If you have any questions about these Terms, please contact us at:
           </p>
           <div className="text-sm ml-5">
-            <p>World of Minifigs/ Brick Extreme LLC</p>
+            <p>Brick Extreme LLC</p>
             <p>Lehi, Utah, 84043</p>
             <p>build.wom@gmail.com</p>
             <p>brickextremeofficial@gmail.com</p>
@@ -230,8 +230,8 @@ const TermsOfUse = () => {
       title: "12. Entire Agreement",
       content: (
         <p className="text-sm">
-          These Terms constitute the entire agreement between you and World of
-          Minifigs concerning the use of this website and the purchase of our
+          These Terms constitute the entire agreement between you and Brick
+          Extreme concerning the use of this website and the purchase of our
           products.
         </p>
       ),
@@ -242,7 +242,7 @@ const TermsOfUse = () => {
     <div className="bg-background p-5">
       <h1 className="text-2xl font-bold text-foreground mb-2">Terms of Use</h1>
       <p className="text-gray-700 text-xs md:text-sm leading-6 mb-2">
-        Welcome to the World of Minifigs! By accessing and using our website
+        Welcome to the Brick Extreme! By accessing and using our website
         (www.worldofminifigs.com) and purchasing products from us, you agree to
         be bound by these Terms of Use ("Terms"). If you do not agree with any
         part of these Terms, you must not use our website.

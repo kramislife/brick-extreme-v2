@@ -11,7 +11,7 @@ const steps = [
   {
     title: "Explore Our Collection",
     description:
-      "Visit the Shop page to view all World of Minifigs products. Filter by category to find exactly what you need.",
+      "Visit the Shop page to view all Brick Extreme products. Filter by category to find exactly what you need.",
   },
   {
     title: "Select Your Favorites",

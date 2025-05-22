@@ -1,6 +1,6 @@
 import React from "react";
 import { Clock, PackageX } from "lucide-react";
-import logo from "@/assets/worldofminifigs.png";
+import logo from "@/assets/logo.png";
 
 // Placeholder image for product card
 export const PlaceholderImage = ({ width = "w-28" }) => (

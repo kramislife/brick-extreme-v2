@@ -110,7 +110,7 @@ const DesktopSidebar = ({ isMinimized, toggleMinimize }) => {
         {!isMinimized && (
           <div className="px-8 pt-9 pb-5">
             <h1 className="text-xl font-bold tracking-wide">
-              World of Minifigures
+              Brick Extreme
             </h1>
           </div>
         )}

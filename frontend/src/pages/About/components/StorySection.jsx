@@ -38,7 +38,7 @@ const StorySection = () => {
         </h2>
         <div className="space-y-4 text-foreground leading-relaxed">
           <p>
-            <span className="font-bold">World of Minifigs (WOM)</span> is an
+            <span className="font-bold">Brick Extreme </span> is an
             online store that offers a wide range of LEGO parts, minifigures,
             sets, and other brick-related items. We started our journey as a
             father-son bonding, brought together by our mutual love for LEGO.

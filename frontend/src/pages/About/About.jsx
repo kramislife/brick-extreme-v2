@@ -11,7 +11,7 @@ import ExploreSection from "@/pages/About/components/ExploreSection";
 const About = () => {
   return (
     <>
-      <Metadata title="About Us - World of Minifigs" />
+      <Metadata title="About Us" />
       <AboutHeroSection />
       <StatSection />
       <StorySection />

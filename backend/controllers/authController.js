@@ -732,11 +732,11 @@ export const contactUs = catchAsyncErrors(async (req, res, next) => {
     // Send confirmation email to user
     await sendEmail({
       email: email,
-      subject: "Thank you for Contacting World of Minifigs",
+      subject: "Thank you for Contacting Brick Extreme",
       message: `
           <p>Hello ${name},</p>
           <p>We've received your message and will get back to you as soon as possible.</p>
-          <p>Best regards,<br>World of Minifigs Team</p>      
+          <p>Best regards,<br>Brick Extreme Team</p>      
       `,
     });
 

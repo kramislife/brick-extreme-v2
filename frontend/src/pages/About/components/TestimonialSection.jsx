@@ -54,7 +54,7 @@ const TestimonialSection = () => {
         </h2>
         <p className="max-w-3xl mx-auto italic text-foreground">
           Don’t just take our word for it — hear straight from real builders who
-          turned their imagination into reality with World of Minifigs.
+          turned their imagination into reality with Brick Extreme.
         </p>
       </motion.div>
 

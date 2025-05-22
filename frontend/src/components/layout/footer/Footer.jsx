@@ -37,7 +37,7 @@ const footerLinks = [
   },
   {
     id: 4,
-    title: "World of Minifigs",
+    title: "Brick Extreme",
     description:
       "Follow us on social media to stay updated on new releases, exclusive promotions, and our latest collections.",
     isSocial: true,
@@ -160,7 +160,7 @@ const Footer = () => {
           {footerLinks.map(renderSection)}
         </div>
         <div className="text-center text-sm text-gray-300 py-5 border-t border-brand-end/50">
-          © Copyright World of Minifigs {new Date().getFullYear()}. All rights
+          © Copyright Brick Extreme {new Date().getFullYear()}. All rights
           reserved
         </div>
       </div>

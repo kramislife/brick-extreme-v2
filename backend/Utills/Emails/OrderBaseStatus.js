@@ -6,7 +6,7 @@ export const OrderBaseTemplate = (
   customMessage,
   customTitle
 ) => {
-  const appName = process.env.SMTP_FROM_NAME || "World of Minifigs";
+  const appName = process.env.SMTP_FROM_NAME || "Brick Extreme";
   const supportEmail = process.env.SMTP_FROM_EMAIL;
   const formattedItems = orderDetails.orderItems || [];
 

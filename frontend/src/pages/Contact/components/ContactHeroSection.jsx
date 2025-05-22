@@ -42,7 +42,7 @@ const ContactHeroSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mx-auto text-sm md:text-base text-gray-300 leading-6 italic"
           >
-            World of Minifigs Team is always open to your suggestions, concerns,
+            Brick Extreme Team is always open to your suggestions, concerns,
             and business ideas. Feel free to reach out and we'll surely respond
             within 24 hours!
           </motion.p>

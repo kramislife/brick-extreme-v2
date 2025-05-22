@@ -122,7 +122,7 @@ const PayPalContent = ({
         application_context: {
           shipping_preference: "NO_SHIPPING",
           user_action: "PAY_NOW",
-          brand_name: "World of Minifigs",
+          brand_name: "Brick Extreme",
         },
       });
     } catch (error) {
