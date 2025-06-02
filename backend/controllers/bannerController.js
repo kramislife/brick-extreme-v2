@@ -25,7 +25,7 @@ export const createBanner = catchAsyncErrors(async (req, res, next) => {
   // Upload image to cloudinary
   const uploadedImage = await uploadImage(
     imageFile,
-    "world_of_minifigs/banners"
+    "brick_extreme/banners"
   );
 
   const banner = await Banner.create({
@@ -62,7 +62,7 @@ export const updateBanner = catchAsyncErrors(async (req, res, next) => {
   if (imageFile) {
     // Delete old image and upload new one 
     await deleteImage(banner.image.public_id);
-    const uploadedImage = await uploadImage(
+    const uploadedImage = await (
       imageFile,
       "world_of_minifigs/banners"
     );

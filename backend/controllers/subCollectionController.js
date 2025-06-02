@@ -136,7 +136,7 @@ export const uploadSubCollectionImage = catchAsyncErrors(
       }
 
       // Use standardized image upload function
-      const url = await uploadImage(image, "world_of_minifigs/sub_collections");
+      const url = await uploadImage(image, "brick_extreme/sub_collections");
 
       console.log("Uploaded URL:", url);
 

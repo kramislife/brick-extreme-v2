@@ -270,7 +270,7 @@ export const deleteAllProducts = catchAsyncErrors(async (req, res, next) => {
 export const uploadProductImage = catchAsyncErrors(async (req, res, next) => {
   const urls = await Promise.all(
     req.body.images.map((image) =>
-      uploadImage(image, "world_of_minifigs/products")
+      uploadImage(image, "brick_extreme/products")
     )
   );
 

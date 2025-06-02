@@ -691,7 +691,7 @@ export const updateProfilePicture = catchAsyncErrors(async (req, res, next) => {
   // Upload new profile picture
   const result = await uploadImage(
     req.body.avatar,
-    "world_of_minifigs/avatars"
+    "brick_extreme/avatars"
   );
 
   user.profile_picture = {
