@@ -55,7 +55,7 @@ const ProductInfo = ({
             )}
 
             {(product?.itemID || product?.partID) && (
-              <>            
+              <>
                 <div className="flex flex-wrap items-center gap-2">
                   {product?.itemID && (
                     <span className="whitespace-nowrap">
@@ -119,17 +119,17 @@ const ProductInfo = ({
                       (subCat) => subCat.category._id === cat._id
                     );
 
-                  return relatedSubCategories?.length > 0
-                    ? relatedSubCategories.map((subCat) => (
-                        <Badge key={subCat._id} variant="subCategory">
-                          {subCat.name}
-                        </Badge>
-                      ))
-                    : (
-                        <Badge key={cat._id} variant="category">
-                          {cat.name}
-                        </Badge>
-                      );
+                  return relatedSubCategories?.length > 0 ? (
+                    relatedSubCategories.map((subCat) => (
+                      <Badge key={subCat._id} variant="subCategory">
+                        {subCat.name}
+                      </Badge>
+                    ))
+                  ) : (
+                    <Badge key={cat._id} variant="category">
+                      {cat.name}
+                    </Badge>
+                  );
                 })}
 
                 {product?.product_collection?.map((col) => {
@@ -138,17 +138,17 @@ const ProductInfo = ({
                       (subCol) => subCol.collection._id === col._id
                     );
 
-                  return relatedSubCollections?.length > 0
-                    ? relatedSubCollections.map((subCol) => (
-                        <Badge key={subCol._id} variant="collection">
-                          {subCol.name}
-                        </Badge>
-                      ))
-                    : (
-                        <Badge key={col._id} variant="subCollection">
-                          {col.name}
-                        </Badge>
-                      );
+                  return relatedSubCollections?.length > 0 ? (
+                    relatedSubCollections.map((subCol) => (
+                      <Badge key={subCol._id} variant="collection">
+                        {subCol.name}
+                      </Badge>
+                    ))
+                  ) : (
+                    <Badge key={col._id} variant="subCollection">
+                      {col.name}
+                    </Badge>
+                  );
                 })}
               </div>
             </div>
@@ -157,9 +157,7 @@ const ProductInfo = ({
           {/* Includes */}
           {product?.product_includes && (
             <div className="space-y-2">
-              <span className="text-sm font-semibold">
-                Bundle Details
-              </span>
+              <span className="text-sm font-semibold">Bundle Details</span>
               <div className="flex flex-wrap gap-2">
                 {product.product_includes
                   .split(",")
@@ -211,11 +209,17 @@ const ProductInfo = ({
           )}
 
           {/* Descriptions */}
-          {[product?.product_description_1, product?.product_description_2, product?.product_description_3]
-            .filter((desc) => desc?.trim())
-            .length > 0 && (
+          {[
+            product?.product_description_1,
+            product?.product_description_2,
+            product?.product_description_3,
+          ].filter((desc) => desc?.trim()).length > 0 && (
             <div className="space-y-2">
-              {[product?.product_description_1, product?.product_description_2, product?.product_description_3]
+              {[
+                product?.product_description_1,
+                product?.product_description_2,
+                product?.product_description_3,
+              ]
                 .filter((desc) => desc?.trim())
                 .map((desc, index) => (
                   <div key={index} className="flex items-start gap-3">

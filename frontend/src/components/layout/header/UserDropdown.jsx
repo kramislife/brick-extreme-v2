@@ -60,9 +60,9 @@ const UserDropdown = () => {
             className="w-full h-full object-cover"
           />
         ) : (
-          <Button variant="accent">
+          <div className="w-full h-full bg-accent text-black flex items-center justify-center text-sm font-medium">
             {user?.name?.charAt(0).toUpperCase()}
-          </Button>
+          </div>
         )}
       </DropdownMenuTrigger>
 
@@ -77,9 +77,9 @@ const UserDropdown = () => {
                 className="w-full h-full object-cover"
               />
             ) : (
-              <Button variant="accent">
+              <div className="w-full h-full bg-accent text-black flex items-center justify-center text-sm font-medium">
                 {user?.name?.charAt(0).toUpperCase()}
-              </Button>
+              </div>
             )}
           </div>
           <div>

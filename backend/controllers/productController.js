@@ -269,9 +269,7 @@ export const deleteAllProducts = catchAsyncErrors(async (req, res, next) => {
 // ------------------------------- UPLOAD PRODUCT IMAGE  ------------------------------------
 export const uploadProductImage = catchAsyncErrors(async (req, res, next) => {
   const urls = await Promise.all(
-    req.body.images.map((image) =>
-      uploadImage(image, "brick_extreme/products")
-    )
+    req.body.images.map((image) => uploadImage(image, "brick_extreme/products"))
   );
 
   const product = await Product.findByIdAndUpdate(

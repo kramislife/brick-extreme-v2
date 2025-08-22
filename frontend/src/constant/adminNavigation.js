@@ -10,6 +10,7 @@ import {
   Gauge,
   Pencil,
   Palette,
+  FileText,
 } from "lucide-react";
 
 export const adminNavigation = [
@@ -22,6 +23,11 @@ export const adminNavigation = [
     icon: Package,
     label: "Products",
     path: "/admin/products",
+  },
+  {
+    icon: FileText,
+    label: "Product Instructions",
+    path: "/admin/instructions",
   },
   {
     icon: Palette,

@@ -30,6 +30,9 @@ import UpdateSkillLevel from "@/components/admin/SkillLevel/UpdateSkillLevel";
 import AddDesigner from "@/components/admin/Designers/AddDesigner";
 import UpdateDesigner from "@/components/admin/Designers/UpdateDesigner";
 import ProductImages from "@/components/admin/Products/components/ProductImages";
+import ViewInstructions from "@/components/admin/Instructions/ViewInstructions";
+import AddInstruction from "@/components/admin/Instructions/AddInstruction";
+import UpdateInstruction from "@/components/admin/Instructions/UpdateInstruction";
 import ViewColor from "@/components/admin/Colors/ViewColor";
 import AddColor from "@/components/admin/Colors/AddColor";
 import UpdateColor from "@/components/admin/Colors/UpdateColor";
@@ -143,6 +146,11 @@ const UserRoutes = (
 
       {/* Order Management */}
       <Route path="orders" element={<ViewOrder />} />
+
+      {/* Instruction Management */}
+      <Route path="instructions" element={<ViewInstructions />} />
+      <Route path="instructions/new" element={<AddInstruction />} />
+      <Route path="instructions/:id" element={<UpdateInstruction />} />
 
       {/* Review Management */}
       <Route path="reviews" element={<ViewReviews />} />

@@ -26,7 +26,7 @@ export const uploadImage = (file, folder) => {
         } else {
           resolve({
             public_id: result.public_id,
-            url: result.url,
+            url: result.secure_url,
           });
         }
       }
@@ -34,12 +34,41 @@ export const uploadImage = (file, folder) => {
   });
 };
 
-// Standard function to delete any image
-export const deleteImage = async (publicId) => {
+// Upload PDF
+export const uploadPDF = (file, folder) => {
+  return new Promise((resolve, reject) => {
+    cloudinary.uploader.upload(
+      file,
+      {
+        // Use image resource type for PDFs to allow inline rendering
+        resource_type: "image",
+        folder: folder,
+        format: "pdf",
+        use_filename: true,
+        unique_filename: false,
+      },
+      (error, result) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve({
+            public_id: result.public_id,
+            url: result.secure_url, // direct link to the PDF
+          });
+        }
+      }
+    );
+  });
+};
+
+// Delete asset (works for both images & PDFs, just pass type)
+export const deleteImage = async (publicId, type = "image") => {
   try {
-    const res = await cloudinary.uploader.destroy(publicId);
+    const res = await cloudinary.uploader.destroy(publicId, {
+      resource_type: type === "pdf" ? "image" : "image",
+    });
     return res.result === "ok";
   } catch (error) {
-    throw new Error(`Failed to delete the image: ${error.message}`);
+    throw new Error(`Failed to delete the asset: ${error.message}`);
   }
 };

@@ -23,10 +23,7 @@ export const createBanner = catchAsyncErrors(async (req, res, next) => {
   }
 
   // Upload image to cloudinary
-  const uploadedImage = await uploadImage(
-    imageFile,
-    "brick_extreme/banners"
-  );
+  const uploadedImage = await uploadImage(imageFile, "brick_extreme/banners");
 
   const banner = await Banner.create({
     image: {
@@ -60,12 +57,9 @@ export const updateBanner = catchAsyncErrors(async (req, res, next) => {
   };
 
   if (imageFile) {
-    // Delete old image and upload new one 
+    // Delete old image and upload new one
     await deleteImage(banner.image.public_id);
-    const uploadedImage = await (
-      imageFile,
-      "world_of_minifigs/banners"
-    );
+    const uploadedImage = await uploadImage(imageFile, "brick_extreme/banners");
     updateData.image = {
       public_id: uploadedImage.public_id,
       url: uploadedImage.url,
@@ -93,7 +87,7 @@ export const deleteBanner = catchAsyncErrors(async (req, res, next) => {
     return next(new ErrorHandler("Banner not found", 404));
   }
 
-  // Delete image from cloudinary 
+  // Delete image from cloudinary
   await deleteImage(banner.image.public_id);
 
   // Delete banner from database
