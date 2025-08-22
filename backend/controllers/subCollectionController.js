@@ -95,21 +95,23 @@ export const updateSubCollection = catchAsyncErrors(async (req, res, next) => {
 
 //------------------------------------ DELETE SUB COLLECTION => admin/subcollections/:id ------------------------------------
 
-export const deleteSubCollectionByID = catchAsyncErrors(async (req, res, next) => {
-  const { id } = req.params;
+export const deleteSubCollectionByID = catchAsyncErrors(
+  async (req, res, next) => {
+    const { id } = req.params;
 
-  const deletedSubCollection = await SubCollection.findByIdAndDelete(id);
+    const deletedSubCollection = await SubCollection.findByIdAndDelete(id);
 
-  if (!deletedSubCollection) {
-    return next(new ErrorHandler("Sub-collection not found", 404));
+    if (!deletedSubCollection) {
+      return next(new ErrorHandler("Sub-collection not found", 404));
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Sub-collection deleted successfully",
+      deletedSubCollection,
+    });
   }
-
-  res.status(200).json({
-    success: true,
-    message: "Sub-collection deleted successfully",
-    deletedSubCollection,
-  });
-});
+);
 
 //------------------------------------ UPLOAD SUB COLLECTION IMAGE => admin/subcollection/:id/upload_image ------------------------------------
 
@@ -124,19 +126,25 @@ export const uploadSubCollectionImage = catchAsyncErrors(
 
       // Find the subcollection first to check if it already has an image
       const existingSubCollection = await SubCollection.findById(req.params.id);
-      
+
       if (!existingSubCollection) {
         return next(new ErrorHandler("Sub-collection not found", 404));
       }
-      
+
       // If the subcollection already has an image, delete it from Cloudinary
-      if (existingSubCollection.image && existingSubCollection.image.public_id) {
+      if (
+        existingSubCollection.image &&
+        existingSubCollection.image.public_id
+      ) {
         await deleteImage(existingSubCollection.image.public_id);
-        console.log("Deleted previous image:", existingSubCollection.image.public_id);
+        console.log(
+          "Deleted previous image:",
+          existingSubCollection.image.public_id
+        );
       }
 
       // Use standardized image upload function
-      const url = await uploadImage(image, "world_of_minifigs/sub_collections");
+      const url = await uploadImage(image, "brick_extreme/sub_collections");
 
       console.log("Uploaded URL:", url);
 

@@ -8,7 +8,6 @@ import TableLayout from "@/components/admin/shared/table/TableLayout";
 import Pagination from "@/components/admin/shared/table/Pagination";
 import Metadata from "@/components/layout/Metadata/Metadata";
 import ViewLayoutSkeleton from "@/components/layout/skeleton/Admin/ViewLayoutSkeleton";
-import { FallbackMessage } from "@/components/product/shared/FallbackStates";
 import { Button } from "@/components/ui/button";
 
 const ViewLayout = ({
@@ -17,7 +16,7 @@ const ViewLayout = ({
   addNewPath,
   addNewText,
   isLoading,
-  error,
+
   data,
   columns,
   globalFilter,
@@ -30,23 +29,7 @@ const ViewLayout = ({
     return <ViewLayoutSkeleton title={title} />;
   }
 
-  if (error) {
-    return (
-      <FallbackMessage
-        title={`Error Loading ${title}`}
-        message={`There was a problem loading the ${title.toLowerCase()}. Please try again later.`}
-      />
-    );
-  }
-
-  if (!data?.length) {
-    return (
-      <FallbackMessage
-        title={`No ${title} Available`}
-        message={`There are no ${title.toLowerCase()} to display. Please check back later or try refreshing the page.`}
-      />
-    );
-  }
+  // Do not early-return on error or empty data; keep layout visible
 
   return (
     <>
@@ -85,7 +68,7 @@ const ViewLayout = ({
             </div>
 
             <TableLayout
-              data={data}
+              data={data || []}
               columns={columns}
               globalFilter={globalFilter}
               setGlobalFilter={setGlobalFilter}

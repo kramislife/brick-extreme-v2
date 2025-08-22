@@ -10,6 +10,7 @@ import { searchApi } from "./api/searchApi";
 import userReducer from "./features/userSlice";
 import cartReducer from "./features/cartSlice";
 import buyNowReducer from "./features/buyNowSlice";
+import { instructionApi } from "./api/instructionApi";
 
 export const store = configureStore({
   reducer: {
@@ -24,6 +25,7 @@ export const store = configureStore({
     [dashboardApi.reducerPath]: dashboardApi.reducer,
     [reviewApi.reducerPath]: reviewApi.reducer,
     [searchApi.reducerPath]: searchApi.reducer,
+    [instructionApi.reducerPath]: instructionApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat([
@@ -35,6 +37,7 @@ export const store = configureStore({
       dashboardApi.middleware,
       reviewApi.middleware,
       searchApi.middleware,
+      instructionApi.middleware,
     ]),
 });
 

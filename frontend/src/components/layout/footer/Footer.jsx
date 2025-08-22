@@ -31,8 +31,8 @@ const footerLinks = [
     id: 3,
     title: "Support",
     links: [
-      { label: "Lehi, Utah 84043", action: "location" },
-      { label: "brickextremeofficial@gmail.com", action: "email" },
+      { label: "Lehi Utah", action: "location" },
+      { label: " support@brickextreme.com", action: "email" },
     ],
   },
   {
@@ -46,14 +46,14 @@ const footerLinks = [
         id: "facebook",
         icon: Facebook,
         color: "hover:text-blue-500",
-        href: "https://www.facebook.com/profile.php?id=61552234252330",
+        href: "https://www.facebook.com/profile.php?id=61568066965988#",
         label: "Facebook",
       },
       {
         id: "instagram",
         icon: Instagram,
         color: "hover:text-pink-500",
-        href: "https://www.instagram.com/theworldofminifigs/",
+        href: "https://www.instagram.com/brickextreme.hq",
         label: "Instagram",
       },
     ],

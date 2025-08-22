@@ -39,7 +39,7 @@ export const createNewReview = catchAsyncErrors(async (req, res, next) => {
               try {
                 const uploadedImage = await uploadImage(
                   base64Image,
-                  "world_of_minifigs/reviews"
+                  "brick_extreme/reviews"
                 );
                 return {
                   public_id: uploadedImage.public_id,
@@ -255,7 +255,7 @@ export const updateReview = catchAsyncErrors(async (req, res, next) => {
           updatedProduct.images.map(async (base64Image) => {
             const uploadedImage = await uploadImage(
               base64Image,
-              "world_of_minifigs/reviews"
+              "brick_extreme/reviews"
             );
             return {
               public_id: uploadedImage.public_id,

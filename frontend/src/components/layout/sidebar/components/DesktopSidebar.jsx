@@ -36,6 +36,11 @@ const DesktopSidebar = ({ isMinimized, toggleMinimize }) => {
         "/admin/update-product",
         "/admin/product-gallery",
       ],
+      "/admin/instructions": [
+        "/admin/instructions",
+        "/admin/new-instruction",
+        "/admin/update-instruction",
+      ],
       "/admin/colors": [
         "/admin/colors",
         "/admin/new-color",
